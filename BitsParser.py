@@ -340,8 +340,8 @@ class BitsParser:
 
                 # Output unique jobs
                 if job.hash not in self.visited_jobs:
-                    formatted_job = json.dumps(job.job_dict, indent=4)
-                    print(formatted_job)
+                    json.dump(job.job_dict, sys.stdout)
+                    print()
 
                     self.visited_jobs.add(job.hash)
         finally:
