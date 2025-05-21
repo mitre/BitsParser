@@ -330,7 +330,7 @@ class BitsParser:
         # If an output file is specified, open it and use it instead of stdout
         if self.out_file:
             orig_stdout = sys.stdout
-            sys.stdout = open(self.out_file, "w")
+            sys.stdout = open(self.out_file, "a")
 
         try:
             for job in jobs:
